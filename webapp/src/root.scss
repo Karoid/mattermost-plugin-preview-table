@@ -1,0 +1,122 @@
+.spreadsheet-preview {
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 80vh;
+        max-width: 95vw;
+    }
+
+    &__container {
+        width: 100%;
+        height: calc(100% - 52px);
+        overflow: auto;
+        padding: 20px;
+        max-height: 80vh;
+        background: white;
+        
+        // 가로 스크롤바 항상 표시
+        overflow-x: scroll;
+        overflow-y: scroll;
+        
+        .Spreadsheet {
+            width: fit-content;
+            min-width: 100%;
+            height: auto;
+            
+            thead {
+                position: sticky;
+                top: 0;
+                background: #f3f3f3;
+                z-index: 1;
+            }
+
+            td:first-child,
+            th:first-child {
+                position: sticky;
+                left: 0;
+                background: #f3f3f3;
+                z-index: 2;
+            }
+
+            td, th {
+                min-width: 100px;
+                max-width: 300px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+
+    &__loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        
+        &-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__sentinel {
+        text-align: center;
+        padding: 20px;
+        background: #f5f5f5;
+    }
+
+    &__error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        padding: 20px;
+        text-align: center;
+        
+        p {
+            color: #e74c3c;
+            background: #fde8e7;
+            padding: 16px;
+            border-radius: 4px;
+            max-width: 400px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 4px;
+        padding: 8px;
+        background: #f5f5f5;
+        border-bottom: 1px solid #ddd;
+    }
+
+    &__tab {
+        padding: 8px 16px;
+        border: none;
+        background: #fff;
+        border-radius: 4px 4px 0 0;
+        cursor: pointer;
+        
+        &:hover {
+            background: #e9ecef;
+        }
+        
+        &.active {
+            background: #007bff;
+            color: white;
+        }
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

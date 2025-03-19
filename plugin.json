@@ -1,0 +1,18 @@
+{
+    "id": "com.karoid.table-preview",
+    "name": "Table Preview",
+    "description": "This plugin adds functionality for table preview.",
+    "homepage_url": "https://github.com/Karoid/mattermost-plugin-table-preview",
+    "support_url": "https://github.com/Karoid/mattermost-plugin-table-preview/issues",
+    "icon_path": "assets/image-preview-zoom.svg",
+    "min_server_version": "6.2.1",
+    "version": "0.0.3",
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    },
+    "settings_schema": {
+        "header": "",
+        "footer": "",
+        "settings": []
+    }
+}
