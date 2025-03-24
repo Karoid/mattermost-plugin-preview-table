@@ -2,13 +2,13 @@
 
 const manifest = JSON.parse(`
 {
-    "id": "com.karoid.table-preview",
-    "name": "Table Preview",
+    "id": "com.karoid.preview-table",
+    "name": "Preview Table",
     "description": "This plugin adds functionality for table preview.",
-    "homepage_url": "https://github.com/Karoid/mattermost-plugin-table-preview",
-    "support_url": "https://github.com/Karoid/mattermost-plugin-table-preview/issues",
-    "icon_path": "assets/image-preview-zoom.svg",
-    "version": "0.0.2",
+    "homepage_url": "https://github.com/Karoid/mattermost-plugin-preview-table",
+    "support_url": "https://github.com/Karoid/mattermost-plugin-preview-table/issues",
+    "icon_path": "assets/preview-table.svg",
+    "version": "0.1.0",
     "min_server_version": "6.2.1",
     "webapp": {
         "bundle_path": "webapp/dist/main.js"
